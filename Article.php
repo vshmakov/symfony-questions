@@ -8,5 +8,4 @@ class  Article
     private ?\DateTime $updatedAt = null;
 
     //...
-
 }
