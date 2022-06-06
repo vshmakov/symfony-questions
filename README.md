@@ -14,4 +14,6 @@
 
 Ответ: Понадобится кастомная функция/фильтр, делающая запрос к БД. Лучше посредством репозитория. Шаблон будет выглядеть как most_popular_products.html.twig.
 
-5. form
+5. В форму передается объект Charter.php. Необходимо, чтобы после отправки формы поле Charter::$startDate содержало наименьшее значение из NavigationLog::$startDate, Charter::$endDate - наибольшее из NavigationLog::$endDate.
+
+Ответ: Нужно повесить listener на \Symfony\Component\Form\FormEvents::POST_SUBMIT. Subscriber в отдельном классе предпочтительнее.
